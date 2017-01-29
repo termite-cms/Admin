@@ -1,18 +1,8 @@
 <?php
 
-namespace Projects\Event\Github\Repository;
+namespace Termite\Admin\Event;
 
-use App\Event\Overlord\Host\Hosts\Xps420Listener;
-use App\Model\Entity\Host;
 use Cake\Event\Event;
-use Cake\Event\EventListenerInterface;
-use Interop\Container\ContainerInterface;
-use PipingBag\Di\PipingBag;
-use React\ChildProcess\Process;
-use React\Promise\Deferred;
-use React\Stomp\Client;
-use React\Stomp\Protocol\Frame;
-use WyriHaximus\React\Cake\Orm\AsyncTableRegistry;
 
 final class SideBarMenuEvent extends Event
 {
@@ -20,7 +10,7 @@ final class SideBarMenuEvent extends Event
 
     private $sections = [];
 
-    public static function create()
+    public static function create(): self
     {
         return new static(static::NAME);
     }

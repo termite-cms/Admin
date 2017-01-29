@@ -1,10 +1,10 @@
 <?php
 
-namespace Admin\View\Helper;
+namespace Termite\Admin\View\Helper;
 
 use Cake\Event\EventManager;
 use Cake\View\Helper;
-use Projects\Event\Github\Repository\SideBarMenuEvent;
+use Termite\Admin\Event\SideBarMenuEvent;
 
 final class SideBarMenuHelper extends Helper
 {
