@@ -27,7 +27,7 @@ class AppController extends Controller
     public function beforeRender(\Cake\Event\Event $event)
     {
         parent::beforeRender($event);
-        $this->viewBuilder()->theme('Admin');
+        $this->viewBuilder()->theme('Termite/Admin');
         /*$this->View->Form->templates([
             'button' => '<button{{attrs}}>{{text}}</button>',
         ]);*/

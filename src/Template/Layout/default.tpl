@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    {{ _view.loadHelper('Admin.SideBarMenu') }}
+    {{ _view.loadHelper('Termite/Admin.SideBarMenu') }}
     {{ _view.Wamp.client('admin') }}
     {{ _view.Html.script('init.js')|raw }}
     {{ _view.Html.script('main.js')|raw }}
