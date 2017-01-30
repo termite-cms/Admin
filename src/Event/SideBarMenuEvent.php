@@ -15,9 +15,9 @@ final class SideBarMenuEvent extends Event
         return new static(static::NAME);
     }
 
-    public function addSection()
+    public function addSection(Section $section)
     {
-        //
+        $this->sections[] = $section;
     }
 
     /**

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    {{ _view.loadHelper('Termite/Admin.SideBarMenu') }}
     {{ _view.Wamp.client('admin') }}
     {{ _view.Html.script('init.js')|raw }}
     {{ _view.Html.script('main.js')|raw }}
@@ -106,9 +105,7 @@
             </form>
             <!-- /.search form -->
             <!-- sidebar menu: : style can be found in sidebar.less -->
-            <ul class="sidebar-menu">
-                <li class="header">NAVIGATION</li>
-            </ul>
+            {{ _view.loadHelper('Termite/Admin.SideBarMenu').render()|raw }}
         </section>
         <!-- /.sidebar -->
     </aside>
