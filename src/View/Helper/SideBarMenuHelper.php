@@ -58,7 +58,12 @@ final class SideBarMenuHelper extends Helper
 
         $html .= '<li>';
         $html .= '<a href="' . h(Router::url($section->getRoute())) . '">';
-        $html .= '<i class="fa fa-calendar"></i> <span>' . $section->getLabel() . '</span>';
+        if (isset($section->getOptions()['image'])) {
+            $html .= '<img src="' . $section->getOptions()['image'] . '" class="img-circle" alt="' . $section->getLabel() . '" style="width: 20px;"> ';
+        } else {
+            $html .= '<i class="fa fa-calendar"></i> ';
+        }
+        $html .= '<span>' . $section->getLabel() . '</span>';
         $html .= '</a>';
         $html .= '</li>';
         return $html;
