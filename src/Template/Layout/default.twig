@@ -6,7 +6,7 @@
     {{ _view.Html.script('main.js')|raw }}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ title }} | Overlord</title>
+    <title>{{ title }}</title>
     {#<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
@@ -127,9 +127,7 @@
             }, '<i class="fa fa-dashboard"></i> Home</a>')|raw }}
         </section>
         <section class="content">
-            <div class="box">
-                {{ _view.fetch('content')|raw }}
-            </div>
+            {{ _view.fetch('content')|raw }}
         </section>
     </div>
     <!-- /.content-wrapper -->
