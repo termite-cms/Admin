@@ -119,12 +119,11 @@
                 {{ page_sub_title }}
                 <small>{{ page_sub_title_sub_text }}</small>
             </h1>
-            {{ _view.Html.getCrumbList({
+            {{ _view.Breadcrumbs.render({
                 class: 'breadcrumb',
                 escape: false,
-                firstClass: false,
                 lastClass: 'active',
-            }, '<i class="fa fa-dashboard"></i> Home</a>')|raw }}
+            })|raw }}
         </section>
         <section class="content">
             <div class="box">
