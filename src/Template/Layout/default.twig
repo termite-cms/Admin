@@ -362,5 +362,8 @@
     });
 </script>
 {{ _view.fetch('scriptBottom')|raw }}
+{% for script in scripts %}
+    {{ _view.Html.script(script)|raw }}
+{% endfor %}
 </body>
 </html>
