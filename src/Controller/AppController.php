@@ -7,13 +7,13 @@ use Cake\Event\Event;
 
 abstract class AppController extends Controller
 {
-    public function initialize()
+    public function initialize(): void
     {
         parent::initialize();
         $this->loadComponent('Flash');
     }
 
-    public function beforeRender(Event $event)
+    public function beforeRender(Event $event): void
     {
         parent::beforeRender($event);
         $this->viewBuilder()->theme('Termite/Admin');
